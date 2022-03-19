@@ -53,6 +53,11 @@ html{
     color: white;
     font-size: 3rem;
     margin-left: 2rem;
+    /* outline: 2px solid black; */
+}
+
+.text .myText .here{
+    display: flex;
 }
 
 .text .icons{
@@ -74,24 +79,69 @@ html{
 @media (max-width: 650px){
     .info{
         flex-direction: column;
+        width: 35rem;
         max-width: 80%;
     }
 
     .text .myText{
         display: flex;
-        margin-top: 1.5rem;
+        padding: 1.5rem 1rem 0 1rem;
         margin-left: 0rem;
+        /* margin-top: 1.5rem; */
         /* outline: 2px solid black; */
     }
     
     .myText div{
-        margin: 0 0.5rem;
         font-size: 2rem;
+    }
+    
+    .myText > div:first-child{
+        margin-left: 0.95rem;
+    }
+
+    .myText > div:not(last-child){
+        margin-right: 0.5rem;
     }
 
     .text .icons{
         justify-content: center;
         margin-left: 0rem;
         /* outline: 2px solid black; */
+    }
+
+    .text .icons img{
+        margin-right: 0rem;
+        margin: 0.5rem;
+    }
+
+}
+
+@media (max-width: 475px){
+    .myImg{
+        width: 225px;
+        height: 225px;
+    }
+
+    .myText div{
+        font-size: 1.7rem;
+    }
+
+    .text .icons img{
+        width: 18px;
+    }
+}
+
+@media (max-width: 425px){
+    .myImg{
+        width: 212.5px;
+        height: 212.5px;
+    }
+
+    .myText div{
+        font-size: 1.3rem;
+    }
+
+    .text .icons img{
+        width: 15px;
     }
 }
