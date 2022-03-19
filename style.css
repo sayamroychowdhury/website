@@ -15,35 +15,29 @@ html{
 }
 
 .mainSection{
-    position: relative;
-}
-
-.bg-image{
     background-image: url("img.jpg");
-    /* filter: blur(8px); */
-    /* -webkit-filter: blur(8px); */
     background-size: cover;
-    background-position: center; /* Center the image */
-    width: 100vw;
+    background-position: center;
     height: 100vh;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
 .info{
     display: flex;
     justify-content: center;
     align-items: center;
-    /* margin: 5rem; */
-    padding: 2.5rem;
+    padding: 3rem;
     background: rgba( 255, 255, 255, 0.15 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 12px );
     -webkit-backdrop-filter: blur( 12px );
     border-radius: 15px;
     width: 40rem;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    height: auto;
 }
 
 .myImg{
@@ -52,10 +46,10 @@ html{
     object-fit: cover;
     object-position: 0px -20px;
     outline: 2px solid white;
-    border-radius: 50%;
+    border-radius: 15px;
 }
 
-.text > div{
+.text .myText{
     color: white;
     font-size: 3rem;
     margin-left: 2rem;
@@ -63,13 +57,13 @@ html{
 
 .text .icons{
     display: flex;
-    margin-top: 0.5rem;
-    font-size: 0rem;
+    margin-top: 1rem;
+    margin-left: 2rem;
 }
 
 .text .icons img{
     width: 20px;
-    margin-right: 0.70rem;
+    margin-right: 1rem;
     filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(128deg) brightness(102%) contrast(101%);
 }
 
@@ -77,6 +71,27 @@ html{
     filter: invert(100%) sepia(90%) saturate(5435%) hue-rotate(103deg) brightness(102%) contrast(107%);
 }
 
-a{
-    text-decoration: none;
+@media (max-width: 650px){
+    .info{
+        flex-direction: column;
+        max-width: 80%;
+    }
+
+    .text .myText{
+        display: flex;
+        margin-top: 1.5rem;
+        margin-left: 0rem;
+        /* outline: 2px solid black; */
+    }
+    
+    .myText div{
+        margin: 0 0.5rem;
+        font-size: 2rem;
+    }
+
+    .text .icons{
+        justify-content: center;
+        margin-left: 0rem;
+        /* outline: 2px solid black; */
+    }
 }
